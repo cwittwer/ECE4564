@@ -1,1 +1,5 @@
 "#ECE4564" 
+
+Assignment 1 Overview:
+																																																																					
+																																																																					Assignment 1 is a text-based question and answer system using WolframAlpha’scomputational knowledge engine.  Questions to your Q&A system are expressed as Twitter Tweets.  The question and resulting answer are “spoken” using text-to-speech (TTS) translation API.The system uses three Rpi’sfollowing the client/server model discussed in class.  The server is iterative and connection-oriented.  Communication among client, bridge and server is handled via stream-oriented sockets.The client Rpicaptures the Tweet containing the question text.  The client extracts, builds and sends a question “payload” to the bridge Rpivia sockets.  The bridge Rpispeaks the question/answer, and sends the payloads to server/client Rpi.The server  sends the question to the WolframAlphaengine and receives the answer.  The server builds and sends an answer “payload” back to the bridge Rpi. The client displays the answer on the attached monitor.
