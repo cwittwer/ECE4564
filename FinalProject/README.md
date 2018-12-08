@@ -40,6 +40,7 @@ Non-Working simple explanation: Did not have a 4th L293D and original motor cont
 			have had all parts working. Also, blew up one of the L293D during testing.
 			
 Controller Implementation: Carson Wittwer Lead
+
 			The Steelseries Stratus XL controller does not have any standard support for 
 			Linux based systems, thus, we had to find another way around. EVDEV was used 
 			to translate between Linux standard input and how the controller was to be 
@@ -57,6 +58,7 @@ Controller Implementation: Carson Wittwer Lead
 			movement then print to console the button name when pressed/moved.
 
 Arm Implementation: MH Charles-Etuk Lead, Carson Wittwer assist
+
 			The Arm proved to be an exciting build. We first assembled the arm using the 
 			provided instructions, getting it working with the out-of-the-box supplies and
 			controller. After this, we set about modifying it. We knew that the out-of-the-box
@@ -74,6 +76,7 @@ Arm Implementation: MH Charles-Etuk Lead, Carson Wittwer assist
 			testing, this implementation worked out to get a well-dialed in arm.
 
 Track Implementation: Jason Nelson Lead
+
 			After assembling the chassis, tracks, and gearbox, we set about wiring the 
 			motors controls. We initially planned to use an Adafruit TB6612 Motor Driver chip,
 			as this seemed to be sufficient for implementing and is frequently used on with
