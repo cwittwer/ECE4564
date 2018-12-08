@@ -9,22 +9,29 @@ MH Charles-Etuk
 B O B - Bomb Operation roBot
 
 Included In Folder:
+
 			README
 			gamepad.py (source code for controller input)
 			arm_controller.py (source code for arm controls - tested and working file)
 			arm_track_controller.py (source code for full controls - not tested but complete logic)
 			BOB_BetaDemo.pptx (presentation for Beta demo, shows controller, arm, and track mappings)
 			
-Concept - 	Robotic Arm mounted to Tracked "Tank" Chassis that is connected/controlled
+Concept - 		
+
+			Robotic Arm mounted to Tracked "Tank" Chassis that is connected/controlled
 			via RasPi GPIO that is socket networked to another RasPi that is sending 
 			commands via a Bluetooth XBox controller
 			
-Working - 	XBox controller inputs
+Working - 		
+
+			XBox controller inputs
 			Arm Control
 
 Non-Working-Tank Control
 
-Parts - 	OWI-535 Robotic Arm Edge (modified) 
+Parts - 		
+
+			OWI-535 Robotic Arm Edge (modified) 
 			(https://www.robotshop.com/en/owi-535-robotic-arm-edge.html)
 			DFRobotShop Rover Chassis Kit
 			https://www.robotshop.com/en/dfrobotshop-rover-chassis-kit.html
@@ -35,7 +42,9 @@ Parts - 	OWI-535 Robotic Arm Edge (modified)
 			2X RasPi 3B+
 			https://www.amazon.com/dp/B07BDR5PDW/ref=cm_sw_r_tw_dp_U_x_1zWcCbEF2J76H
 			
-Non-Working simple explanation: Did not have a 4th L293D and original motor controller
+Non-Working simple explanation: 
+
+			Did not have a 4th L293D and original motor controller
 			was not working with this system. Should have ordered another L293D and would 
 			have had all parts working. Also, blew up one of the L293D during testing.
 			
