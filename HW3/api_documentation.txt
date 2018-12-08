@@ -1,0 +1,75 @@
+service api
+
+Endpoint           | Method | Parameters | Response Code/Message      | Response Body | Description
+-------------------------------------------------------------------------------------------------------------------------
+/add_user          | POST   | JSON       | Standard response code and | N/A           | add user to AuthDB
+                   |        |            | message upon success or    |               |
+                   |        |            | failure.                   |               |
+-------------------------------------------------------------------------------------------------------------------------
+/upload/led        | POST   | bash file  | Standard response code     | N/A           | upload a curl cmds bash file to
+                   |        |            | message upon success or    |               | service RPI, these curl cmds should
+                   |        |            | failure.                   |               | be sent to led server;
+                   |        |            |                            |               | Authorization required
+-------------------------------------------------------------------------------------------------------------------------
+/upload/storage    | POST   | bash file  | Standard response code     | N/A           | upload a curl cmds bash file to
+                   |        |            | message upon success or    |               | service RPI, thse curl cmds should be
+                   |        |            | failure.                   |               | sent to storage server
+                   |        |            |                            |               | Authorization required
+
+LED api
+
+Endpoint  | Method | Parameters | Response Code/Message      | Response Body      | Description
+---------------------------------------------------------------------------------------------------
+/LED/on   | POST   | N/A        | Standard response code and | N/A                | LED on
+          |        |            | message upon success or    |                    |
+          |        |            | failure.                   |                    |
+---------------------------------------------------------------------------------------------------
+/LED/off  | POST   | N/A        | Standard response code and | N/A                | LED off
+          |        |            | message upon success or    |                    |
+          |        |            | failure.                   |                    |
+---------------------------------------------------------------------------------------------------
+/LED      | POST   | JSON       | Standard response code and | N/A                | change one
+          |        |            | message upon success or    |                    | colors'
+          |        |            | failure.                   |                    | intensity
+---------------------------------------------------------------------------------------------------
+/LED/info | GET    | N/A        | Standard response code and | A JSON object that | Get LED info
+          |        |            | message upon success or    | contains all the   |
+          |        |            | failure                    | correct values     |
+
+/LED Parameters
+
+Name      | Type   | Value
+------------------------------------------
+color     | string | red, blue, green
+------------------------------------------
+intensity | int    | 0 <= intensity <= 100
+
+
+Storage APIs
+
+Endpoint     | Method | Parameters   | Response Code/Message      | Response Body      | Description
+-----------------------------------------------------------------------------------------------------------------
+/book/list   | GET    | N/A          | Standard response code and | A JSON object that | Get book list
+             |        |              | message upon success or    | contains all the   |
+             |        |              | failure.                   | correct values     |
+-----------------------------------------------------------------------------------------------------------------
+/book/count  | GET    | Name, Author | Standard response code and |                    | Get a book's stock
+             |        |              | message upon success or    | book count         | number
+             |        |              | failure.                   |                    |
+-----------------------------------------------------------------------------------------------------------------
+/book/delete | DELETE | JSON         | Standard response code and | N/A                | Delete one book from
+             |        | (book info)  | message upon success or    |                    | DB
+             |        |              | failure.                   |                    |
+-----------------------------------------------------------------------------------------------------------------
+/book/buy    | PUT    | JSON         | Standard response code and | N/A                | increase book stock #
+             |        | (book info   | message upon success or    |                    | DB
+             |        | with count)  | failure.                   |                    |
+-----------------------------------------------------------------------------------------------------------------
+/book/sell   | PUT    | JSON         | Standard response code and | N/A                | decrease book stock #
+             |        | (book info   | message upon success or    |                    | DB
+             |        | with count)  | failure.                   |                    |
+-----------------------------------------------------------------------------------------------------------------
+/book/add    | POST   | JSON         | Standard response code and | N/A                | add book to
+             |        | (book info   | message upon success or    |                    | DB
+             |        | with count)  | failure.                   |                    |
+

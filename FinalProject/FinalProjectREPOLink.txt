@@ -1,0 +1,13 @@
+Final Project
+ECE 4564 NetApps
+Team 08
+
+Carson Wittwer
+Jason Nelson
+MH Charles-Etuk
+
+B O B - Bomb Operation roBot
+
+REPO LINK::::
+
+https://github.com/cwittwer/ECE4564/tree/master/FinalProject
